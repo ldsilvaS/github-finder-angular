@@ -1,17 +1,50 @@
-<div class="container">
-  <div class="text_container">
-    <h1>GitHub Finder</h1>
-    <p>Encontre qualquer perfil do GitHub com apenas um clique!</p>
+<main>
+  <div class="container">
+    <div class="text_container">
+      <h1>GitHub Finder</h1>
+      <p>Encontre qualquer perfil do GitHub com apenas um clique!</p>
+    </div>
+    <div class="input_container">
+      <input
+        type="text"
+        placeholder="GitHub Name"
+        [(ngModel)]="valorDoInput"
+        (ngModelChange)="limpaUser()"
+      />
+      <button class="button" (click)="getUser()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+        </svg>
+        <div class="text">Search</div>
+    </button>
+    </div>
   </div>
-  <div class="input_container">
-    <input type="text"
-      placeholder="GitHub Name"
-    />
-    <button class="button" (click)="getUser()">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-      </svg>
-      <div className="text">Search</div>
-  </button>
+
+  <div *ngIf="user" class="result_container">
+    <form class="form_user">
+      <img class="avatar" src="{{avatarImg}}">
+      <p class="userName">{{user.name}}</p>
+      <p class="userLogin">{{user.login}}</p>
+      <button class="visitUrl" (click)="visitProfile()">Visitar</button>
+      <div class="div-row">
+        <fa-icon [icon]="faUserGroup"></fa-icon>
+        <p class="followers">{{user.followers}}<span>followers</span></p>
+        <span class="dot-follow">·</span>
+        <p class="followers">{{user.following}}<span>following</span></p>
+    </div>
+    <p class="company">
+      <fa-icon [icon]="faBuilding"></fa-icon>
+      <span>{{user.company}}</span>
+    </p>
+    <p class="location">
+      <fa-icon [icon]="faLocationDot"></fa-icon>
+      <span>{{user.location}}</span>
+    </p>
+
+    </form>
   </div>
-</div>
+  <div *ngIf="!user">
+
+  </div>
+</main>
+

@@ -5,10 +5,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
+main {
   display: flex;
   height: 100vh;
   background: #0D1117;
   align-items: center;
   justify-content: center;
+  gap: 40px;
 }

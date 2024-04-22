@@ -52,3 +52,136 @@
 .input_container input::placeholder {
   color: #E2F6F6;
 }
+
+.button {
+  background-color: #ffffff00;
+  color: #fff;
+  width: 8.5em;
+  height: 2.9em;
+  border: #3654ff 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+}
+
+.button:hover {
+  background-color: #3654ff;
+  cursor: pointer;
+  }
+
+  .button svg {
+  width: 1.6em;
+  margin: -0.2em 0.8em 1em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+  }
+
+  .button:hover svg {
+  transform: translateX(5px);
+  }
+
+  .text {
+  margin: 0 1.5em
+  }
+
+
+  .result_container {
+    display: flex;
+    width: 400px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    background:#0D1117;
+    box-shadow: 1px 1px 20px #ffffff20;
+    color: #fff;
+  }
+
+  .form_user .avatar {
+    width: 220px;
+    border-radius: 50%;
+  }
+
+  .form_user .userName {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .form_user .userLogin {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #848d97;
+  }
+
+  .form_user .visitUrl {
+    display: block;
+    margin-top: 15px;
+    padding: 5px 85px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    background: #292E36;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #c9d1d9;
+    transition: background 0.5s;
+  }
+
+  .form_user .visitUrl:hover {
+    background: #32353a;
+  }
+
+  .form_user .div-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-block: 15px;
+    color: #848d97;
+    font-size: 0.9em;
+  }
+
+  .form_user .followers {
+    margin-left: 5px;
+    color: #fff;
+  }
+
+  .form_user .followers span {
+    color: #848d97;
+    margin-left: 5px;
+  }
+
+  .form_user .dot-follow {
+    margin-left: 5px;
+    color: #fff;
+  }
+
+  .form_user .company {
+    display: flex;
+    align-items: center;
+    color: #848d97;
+    font-size: 14px;
+  }
+
+  .form_user .company span {
+    color: white;
+    margin-left: 5px;
+  }
+
+  .form_user .location {
+    display: flex;
+    align-items: center;
+    color: #848d97;
+    font-size: 14px;
+  }
+
+  .form_user .location span {
+    color: white;
+    margin-left: 5px;
+  }
